@@ -7,10 +7,10 @@ class Evaluator:
     def run(self, node):
         if isinstance(node, list):
             for n in node:
-                for k, v in n.iteritems():
+                for k, v in n.items():
                     self.execute([k, v])
         elif isinstance(node, dict):
-            for k, v in node.iteritems():
+            for k, v in node.items():
                 self.execute([k, v])
 
     def execute(self, loc):
@@ -24,7 +24,7 @@ class Evaluator:
             self.stop()
 
     def echo(self, v):
-        print v
+        print(v)
 
     def goto(self, v):
         for node in self.AST:
