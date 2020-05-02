@@ -29,12 +29,11 @@ class BooLexer:
         print(f"lexer.buffer{self.buffer}")
         print(f"lexer.handleState({self.state})")
 
-        self.tokens.append(BooState(self.state, self.buffer, None).StateToken())
+        self.tokens.append(BooState(self.state, "".join(self.buffer), None).StateToken())
 
         # Reset state and buffer for the next round.
         self.state  = LexState.INIT
         self.buffer = []
-
 
 class BooState:
 

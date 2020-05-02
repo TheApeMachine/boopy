@@ -1,5 +1,7 @@
 import logging
 from boolexer import BooLexer
+from booparser import BooParser
+from booeval import BooEval
 
 class BooLoader:
 
@@ -10,12 +12,20 @@ class BooLoader:
 class Program:
 
     def __init__(self, fh):
-        self.code  = fh
-        self.lexer = BooLexer()
+        self.code = fh
 
     def Run(self):
         for line in self.code:
             print(f"line: {line}")
-            self.lexer.Run(line)
-            print(f"tokens: {self.lexer.tokens}")
 
+            lexer = BooLexer()
+            lexer.Run(line)
+            print(f"tokens: {lexer.tokens}")
+
+            parser = BooParser(lexer.tokens)
+            parser.Run()
+            print(f"ast: {parser.ast}")
+
+            evaluator = BooEval(parser.ast)
+            evaluator.Run()
+            print(f"ouput: {evaluator.output}")
