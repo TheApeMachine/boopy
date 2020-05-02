@@ -1,5 +1,13 @@
 # BooPy
 
-This repository accompanies the video on creating your own programming language in Python.
-This is more a proof of concept than anything else, and I have since started to implement
-the features of this language in Go, which comes with its own repository and video series.
+This repository accompanies the video series on creating your own programming language in Python.
+
+https://www.youtube.com/watch?v=cRvmSMWLZlY&list=PLJQFjuCtjUdk-Pi3SRYYiH5W9vjKTNRWp&index=2&t=0s
+
+## Running
+
+Make sure you have a .boo file somewhere that adheres to the specs of the language and run:
+
+```bash
+python3 boogie.py <filename>.boo
+```
