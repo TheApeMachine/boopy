@@ -14,7 +14,9 @@ class Evaluator:
                 self.execute([k, v])
 
     def execute(self, loc):
-        if isinstance(loc[1], list):
+        if loc[0] == '+':
+            self.add(loc[0][0], loc[0][1])
+        elif isinstance(loc[1], list):
             self.run(loc[1])
         elif loc[0] == 'echo':
             self.echo(loc[1])
@@ -22,6 +24,9 @@ class Evaluator:
             self.goto(loc[1])
         elif loc[0] == 'stop':
             self.stop()
+
+    def add(self, a, b):
+        print(int(a) + int(b))
 
     def echo(self, v):
         print(v)
