@@ -29,9 +29,9 @@ class Program:
 
         parser = BooParser(self.tokens)
         parser.Run()
-        print(f"vars: {parser.variables}")
-        print(f"ast:  {parser.ast}")
+        #print(f"vars: {parser.variables}")
+        #print(f"ast:  {parser.ast}")
 
-        #evaluator = BooEval(parser.ast)
-        #evaluator.Run()
-        #print(f"ouput: {evaluator.output}")
+        evaluator = BooEval(parser.ast)
+        evaluator.Run()
+        print(f"ouput: {evaluator.output}")

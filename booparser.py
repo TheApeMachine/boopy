@@ -21,13 +21,13 @@ class BooParser:
 
     def Run(self):
         for token in self.tokens:
-            print(token)
+            #print(token)
             self.getState(token)
-            print(f"state: {self.state}")
-            print(f"hstate: {self.hstate}")
+            #print(f"state: {self.state}")
+            #print(f"hstate: {self.hstate}")
             self.handleState(token)
-            print(f"vars: {self.variables}")
-            print(f"mems: {self.memory}")
+            #print(f"vars: {self.variables}")
+            #print(f"mems: {self.memory}")
             #print(f"ast: {self.ast}")
 
     def getState(self, token):

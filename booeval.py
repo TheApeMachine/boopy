@@ -5,19 +5,20 @@ class BooEval:
     def __init__(self, ast):
         self.ast       = ast
         self.output    = ""
-        self.operators = {'+': 'add'}
 
     def Run(self):
         for node in self.ast:
-            print(f"booeval.Run({node})")
+            print(f"node: {node}")
 
-            n = node
+            for key, value in node.items():
+                getattr(self, key)(value)
 
-            if node in self.operators:
-                n = self.operators[node]
-
-            getattr(self, n)(self.ast[node])
+    def out(self, value):
+        if isinstance(value, dict):
+            for key, value in value.items():
+                getattr(self, key)(value)
+        else:
+            self.output += value + "\n"
 
     def add(self, values):
-        print(f"booeval.add({values})")
-        self.output = sum(map(int, values))
+        self.output += str(sum(map(int, values))) + "\n"
