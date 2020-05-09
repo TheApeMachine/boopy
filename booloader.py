@@ -12,20 +12,26 @@ class BooLoader:
 class Program:
 
     def __init__(self, fh):
-        self.code = fh
+        self.code   = fh
+        self.tokens = []
 
     def Run(self):
         for line in self.code:
-            print(f"line: {line}")
+            #print(f"line: {line}")
 
             lexer = BooLexer()
             lexer.Run(line)
-            print(f"tokens: {lexer.tokens}")
 
-            parser = BooParser(lexer.tokens)
-            parser.Run()
-            print(f"ast: {parser.ast}")
+            for token in lexer.tokens:
+                self.tokens.append(token)
 
-            evaluator = BooEval(parser.ast)
-            evaluator.Run()
-            print(f"ouput: {evaluator.output}")
+        #print(f"tokens: {self.tokens}")
+
+        parser = BooParser(self.tokens)
+        parser.Run()
+        print(f"vars: {parser.variables}")
+        print(f"ast:  {parser.ast}")
+
+        #evaluator = BooEval(parser.ast)
+        #evaluator.Run()
+        #print(f"ouput: {evaluator.output}")

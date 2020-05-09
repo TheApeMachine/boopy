@@ -1,0 +1,70 @@
+tokens: [
+	{'id': <LexState.COMMENT: 2>, 'value': ' Instantiate two variables.'}
+]
+tokens: [
+	{'id': <LexState.VARIABLE: 6>, 'value': 'a'},
+	{'id': <LexState.OPERATOR: 5>, 'value': '='},
+	{'id': <LexState.NUMERIC: 4>, 'value': '12'}
+]
+tokens: [
+	{'id': <LexState.VARIABLE: 6>, 'value': 'b'},
+	{'id': <LexState.OPERATOR: 5>, 'value': '='},
+	{'id': <LexState.NUMERIC: 4>, 'value': '20'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
+tokens: [
+	{'id': <LexState.COMMENT: 2>, 'value': ' Loop from 12 to 20 (8 loops).'}
+]
+tokens: [
+	{'id': <LexState.VARIABLE: 6>, 'value': 'a'},
+	{'id': <LexState.KEYWORD: 7>, 'value': 'to'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'b'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '{'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\t'},
+	{'id': <LexState.COMMENT: 2>, 'value': ' Print to stdout.'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\t'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'a'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '}'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
+tokens: [
+	{'id': <LexState.COMMENT: 2>, 'value': ' Loop from 12 to 20 (8 loops)'}
+]
+tokens: [
+	{'id': <LexState.COMMENT: 2>, 'value': ' with an interation index (0 to 7).'}
+]
+tokens: [
+	{'id': <LexState.VARIABLE: 6>, 'value': 'a'},
+	{'id': <LexState.KEYWORD: 7>, 'value': 'to'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'b'},
+	{'id': <LexState.KEYWORD: 7>, 'value': 'as'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'i'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '{'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\t'},
+	{'id': <LexState.COMMENT: 2>, 'value': ' Add together and print to stdout.'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '\t'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'a'},
+	{'id': <LexState.OPERATOR: 5>, 'value': '+'},
+	{'id': <LexState.VARIABLE: 6>, 'value': 'i'}
+]
+tokens: [
+	{'id': <LexState.DELIMITER: 3>, 'value': '}'},
+	{'id': <LexState.DELIMITER: 3>, 'value': '\n'}
+]
